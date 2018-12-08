@@ -1,22 +1,50 @@
-<BoxLayout>:
+<CustomLayout@BoxLayout>:
     orientation: "vertical"
     spacing: 10
     padding: 10
 
-    Label:
-        font_size: 32
-        color: 0, 0, 0, 1
-        text: "Rams Rewards"
-        size_hint_y: 0.2
+<CustomLabel@Label>:
+    color: 0, 0, 0, 1
+    size_hint_y: 0.2
+
+<PageLayout>:
+    CustomLayout:
+        Label:
+            font_size: 32
+            color: 0, 0, 0, 1
+            text: "Rams Rewards"
+            size_hint_y: 0.2
+
+        Button:
+            text: "<logo>"
+            color: 0, 0, 0, 1
+            size_hint_y: 0.8
+            size_hint_x: 0.3
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+        CustomLayout:
+            Label:
+                font_size: 38
+                color: 0, 0, 0, 1
+                text: "Total Points: #####"
+                size_hint_y: 0.2
+
+        CustomLayout:
+            CustomLabel:
+                text: "<Student Name>"
+            CustomLabel:
+                text: "<Student ID"
+            CustomLabel:
+                text: "Homeroom"
 
 
-    Button:
-        text: "<logo>"
-        color: 0, 0, 0, 1
-        size_hint_y: 0.8
-        size_hint_x: 0.3
-        pos_hint: {"center_x": .5, "center_y": .5}
+    CustomLayout:
+        CustomLayout:
+            CustomLabel:
+                font_size: 38
+                text: "page2"
 
-
-    Button:
-        text: "3rd"
+        CustomLayout:
+            CustomLabel:
+                font_size: 38
+                text: "Rewards"
