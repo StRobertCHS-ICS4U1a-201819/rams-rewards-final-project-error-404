@@ -1,19 +1,26 @@
 <CustomLayout@BoxLayout>:
     orientation: "vertical"
-    spacing: 10
-    padding: 10
+    spacing: 5
+    padding: 5
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
 <CustomLabel@Label>:
     color: 0, 0, 0, 1
     size_hint_y: 0.2
 
 <PageLayout>:
+
     CustomLayout:
         Label:
             font_size: 32
-            color: 0, 0, 0, 1
+            color: 0, .5, .2, 1
             text: "Rams Rewards"
-            size_hint_y: 0.2
+
 
         Button:
             text: "<logo>"
@@ -26,25 +33,42 @@
             Label:
                 font_size: 38
                 color: 0, 0, 0, 1
-                text: "Total Points: #####"
+                text: "Total Points: 00275"
                 size_hint_y: 0.2
 
         CustomLayout:
             CustomLabel:
-                text: "<Student Name>"
+                text: "Nicholas Gin"
             CustomLabel:
-                text: "<Student ID"
+                text: "1122559"
             CustomLabel:
-                text: "Homeroom"
+                text: "12H"
 
 
     CustomLayout:
         CustomLayout:
             CustomLabel:
                 font_size: 38
-                text: "page2"
+                text: "Activity"
+            Button:
+                size_hint_y: 0.8
+                text: "<graph>"
 
         CustomLayout:
             CustomLabel:
                 font_size: 38
                 text: "Rewards"
+            Button:
+                size_hint_y: 0.8
+
+    CustomLayout:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Button:
+            background: 'Users/Nick/pictures/qrcode.png'
+            text: '<qr code>'
+
